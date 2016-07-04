@@ -6,9 +6,9 @@ file=./secret/midata.dat
 results=./secret/results.dat
 
 cat ${file} | ./parse.sh "TFL" Expenses:Travel Assets:Current > ${results}
-cat ${file} | ./parse.sh Pret Expenses:Food:Breakfast Assets:Current >> ${results}
-cat ${file} | ./parse.sh McDonalds Expenses:Food:Drunk Assets:Current >> ${results}
-cat ${file} | ./parse.sh Boots Expenses:Toiletries Assets:Current >> ${results}
+cat ${file} | ./parse.sh "Pret" Expenses:Food:Breakfast Assets:Current >> ${results}
+cat ${file} | ./parse.sh "McDonalds" Expenses:Food:Drunk Assets:Current >> ${results}
+cat ${file} | ./parse.sh "Boots" Expenses:Toiletries Assets:Current >> ${results}
 cat ${file} | ./parse.sh "Fifth Dimension" Expenses:Gym Assets:Current >> ${results}
 cat ${file} | ./parse.sh "TV Licence" "Expenses:TV Licence" Assets:Current >> ${results}
 cat ${file} | ./parse.sh "Zeppelin Shelter" "Expenses:Pub" Assets:Current >> ${results}
