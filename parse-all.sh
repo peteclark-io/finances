@@ -32,6 +32,7 @@ cat ${file} | ./parse.sh "Waterstones" Expenses:Gifts Assets:Current >> ${result
 cat ${file} | ./parse.sh "Canteen" Expenses:Pub Assets:Current >> ${results}
 cat ${file} | ./parse.sh "The Alibi" Expenses:Pub Assets:Current >> ${results}
 cat ${file} | ./parse.sh "Premium Bonds" Assets:Savings Assets:Current >> ${results}
+cat ${file} | ./parse.sh "Subway" Expenses:Food:Lunch Assets:Current >> ${results}
 
 cat ./secret/savings.dat ${results} > ${results}.2
 mv ${results}.2 ${results}

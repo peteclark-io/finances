@@ -2,13 +2,19 @@
 
 cd $(dirname $0)
 
-. ~/.dotfiles/.colours
-. ~/.dotfiles/.encryption
+. ~/.bash_profile
 
 password=${2}
 colours
 
+function check {
+  if [ ! -d ./secret ]; then
+    mkdir secret
+  fi
+}
+
 function encrypt_all {
+  check
   cd secret
   for file in $(ls *.dat); do
     encrypt ${file} $password
@@ -18,6 +24,7 @@ function encrypt_all {
 }
 
 function decrypt_all {
+  check
   cd data
   for file in $(ls *.secret); do
     decrypt ${file} $password
