@@ -8,13 +8,13 @@ import ledger
 @click.argument('query')
 def run(query):
     journal = ledger.read_journal("./secret/ledger.dat")
-    for xact in journal.xacts():
-        for post in xact.posts():
-            print post.date, post.account, post.amount
-            
-    for xact in ledger.read_journal("./secret/bills.dat").xacts():
-        for post in xact.posts():
-            print post.date, post.account, post.amount
+    for post in journal.query(query):
+        #for post in xact.posts():
+        print post.date, post.account, post.amount
+
+    #for xact in ledger.read_journal("./secret/bills.dat").xacts():
+    #    for post in xact.posts():
+    #        print post.date, post.account, post.amount
 
 if __name__ == '__main__':
     run()
