@@ -1,0 +1,43 @@
+#!/usr/bin/env python
+# coding=utf-8
+
+from datetime import date, timedelta;
+
+import click
+
+@click.group(chain=True)
+def cli():
+    pass
+
+
+@cli.command('gents')
+def gents():
+    click.echo(date.today().strftime('%Y/%m/%d * Gentlemans Baristas'))
+    click.echo('    Expenses:Food:Coffee                                                        £2.70')
+    click.echo('    Assets:Current:Mondo')
+    click.echo('')
+
+@cli.command('pret')
+def pret():
+    click.echo(date.today().strftime('%Y/%m/%d * Pret'))
+    click.echo('    Expenses:Food:Coffee                                                        £0.74')
+    click.echo('    Expenses:Food:Breakfast                                                     £1.60')
+    click.echo('    Assets:Current:Mondo')
+    click.echo('')
+
+@cli.command('chilango')
+def pret():
+    click.echo(date.today().strftime('%Y/%m/%d ! Chilangos'))
+    click.echo('    Expenses:Food:Lunch                                                         £6.95')
+    click.echo('    Liabilities:Amex Credit Card')
+    click.echo('')
+
+@cli.command('tfl')
+def tfl():
+    click.echo(date.today().strftime('%Y/%m/%d * TFL'))
+    click.echo('    Expenses:Travel:Tube                                                        £5.80')
+    click.echo('    Assets:Current:Mondo')
+    click.echo('')
+
+if __name__ == '__main__':
+    cli()
