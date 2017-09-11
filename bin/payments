@@ -17,6 +17,13 @@ def gents():
     click.echo('    Assets:Current:Mondo')
     click.echo('')
 
+@cli.command('ekachai')
+def gents():
+    click.echo(date.today().strftime('%Y/%m/%d * Ekachai'))
+    click.echo('    Expenses:Food:Lunch                                                         £6.50')
+    click.echo('    Assets:Current:Mondo')
+    click.echo('')
+
 @cli.command('pret')
 def pret():
     click.echo(date.today().strftime('%Y/%m/%d * Pret'))
