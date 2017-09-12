@@ -39,6 +39,14 @@ def pret():
     click.echo('    Liabilities:Amex Credit Card')
     click.echo('')
 
+@cli.command('ethiopian')
+def pret():
+    click.echo(date.today().strftime('%Y/%m/%d * Ethiopian'))
+    click.echo('    Expenses:Food:Lunch                                                         £5.50')
+    click.echo('    Assets:Cash                                                                 £4.50')
+    click.echo('    Assets:Current:Mondo')
+    click.echo('')
+
 @cli.command('tfl')
 def tfl():
     click.echo(date.today().strftime('%Y/%m/%d * TFL'))
