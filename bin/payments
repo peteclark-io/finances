@@ -54,5 +54,12 @@ def tfl():
     click.echo('    Assets:Current:Mondo')
     click.echo('')
 
+@cli.command('topup')
+def topup():
+    click.echo(date.today().strftime('%Y/%m/%d ! Topup'))
+    click.echo('    Assets:Current:Mondo                                                        £100')
+    click.echo('    Assets:Current:HSBC')
+    click.echo('')
+
 if __name__ == '__main__':
     cli()
