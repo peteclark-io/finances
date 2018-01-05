@@ -27,7 +27,7 @@ def gents():
 @cli.command('pret')
 def pret():
     click.echo(date.today().strftime('%Y/%m/%d * Pret'))
-    click.echo('    Expenses:Food:Coffee                                                        £0.74')
+    click.echo('    Expenses:Food:Coffee                                                        £0.49')
     click.echo('    Expenses:Food:Breakfast                                                     £1.60')
     click.echo('    Assets:Current:Mondo')
     click.echo('')
